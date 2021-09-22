@@ -1,0 +1,67 @@
+import discord
+import random
+
+sigma_tips = ['Men that are true to themselves do not chase children. They walk up to them in a Lamborghini','Women are sex dolls,so treat them like it', 'Do not wear condoms, instead just abandon the whore', 'I am not gay mother, I just put my focus on money instead of healthy romantic relationships', 'Cum in the sink, before you sink in the cum', 'Sex is temporary, DooM is eternal' ]
+gender_male = ['Based', 'Remember to never clean your penis','Rape is an art not a crime']
+gender_female = ['Cringe', 'Wear something slutty so my fellow sigmas can see if you are rapeable', 'Clean it']
+funny = ['https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://www.youtube.com/watch?v=nrzH5rM1jv8&ab_channel=Shaolin', 'https://www.youtube.com/watch?v=3Wn1uewM-aQ&ab_channel=HiTopFilms']
+
+
+TOKEN = 'ODkwMjY1MDc1NDYwNTA1NjUw.YUtR9g.F7mhS4dfSJk-sfYV1iHd_6eVxoM'
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+
+@client.event
+async def on_message(message):
+    username = str(message.author).split('#')[0]
+    user_message = str(message.content)
+    channel = str(message.channel.name)
+    print(f'{username}: {user_message} ({channel})')
+
+    if message.author == client.user:
+        return
+    if message.channel.name == 'bot':
+        if user_message.lower() == 'hello':
+            await message.channel.send(f'Hello {username}! This is your reminder to take the blue pill ')
+            return
+        elif user_message.lower() == 'bye':
+            await message.channel.send(f'See you later bitch!')
+            return
+        elif user_message.lower() == 'sigma tips' or 'Sigma tips':
+            await message.channel.send(random.choice(sigma_tips))
+            return
+        elif user_message.lower() == ('funny'or 'Funny') :
+            await message.channel.send(random.choice(funny))
+            return
+        elif user_message.lower() == ('')
+
+
+
+
+
+            
+
+
+
+
+
+
+    if user_message.lower() == '!anywhere':
+        await message.channel.send('This can be used anywhere!')
+        return
+
+
+
+client.run(TOKEN)
+
+
+
+
+
+
+  # 8====D //Written By Dankboy69420
